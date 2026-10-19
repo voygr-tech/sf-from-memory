@@ -1,0 +1,26 @@
+[project]
+name = "sfmap"
+version = "0.1.0"
+description = "Can LLMs draw San Francisco from memory? A small, fun map benchmark."
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "anthropic>=0.70",
+    "httpx>=0.27",
+    "matplotlib>=3.9",
+    "numpy>=2.0",
+    "openai>=2.0",
+    "pillow>=11.0",
+    "requests>=2.32",
+    "shapely>=2.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.8"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
